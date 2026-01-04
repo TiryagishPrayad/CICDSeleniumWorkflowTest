@@ -18,7 +18,7 @@ public class LoginSteps {
     @When("user enters valid username and password")
     public void user_enters_credentials() {
         driver.findElement(By.id("username")).sendKeys("tomsmith");
-        driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+        driver.findElement(By.id("password")).sendKeys("SuperSecretPasswor!");
         System.out.println("hello");
         driver.findElement(By.cssSelector("button[type='submit']")).click();
     }
