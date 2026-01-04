@@ -3,6 +3,8 @@ name: Cucumber CI - Login Critical
 on:
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   test:
@@ -20,10 +22,3 @@ jobs:
 
       - name: Run Maven Tests
         run: mvn clean test
-
-      - name: Upload Cucumber Report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cucumber-report
-          path: target/cucumber-report.html
